@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Michael Gavino — Portafolio Personal</title>
+  <meta name="description" content="Portafolio personal de Nombre Apellido: presentación, proyectos, reflexiones en Cayetano y contacto." />
+  <meta name="author" content="Nombre Apellido" />
+  <meta name="theme-color" content="#0ea5e9" />
+
+  <!-- SEO y redes sociales (rellenar) -->
+  <meta property="og:title" content="Nombre Apellido — Portafolio" />
+  <meta property="og:description" content="Presentación, proyectos y reflexiones." />
+  <meta property="og:image" content="assets/og-image.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://tu-dominio.com" />
+  <meta name="twitter:card" content="summary_large_image" />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ========= HEADER ========= -->
+  <header>
+    <div class="container">
+      <nav>
+        <div class="nav-left">
+          <span class="tag">Cayetano</span>
+          <span class="brand">Michael Gavino</span>
+        </div>
+        <div class="nav-links">
+          <a href="#sobre-mi">Sobre mí</a>
+          <a href="#proyectos">Proyectos</a>
+          <a href="#reflexiones">Reflexiones</a>
+          <a href="#galeria">Galería</a>
+          <a href="#timeline">Línea de tiempo</a>
+          <a href="#contacto">Contacto</a>
+          <button class="btn" id="themeToggle" aria-label="Cambiar tema">🌓</button>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <!-- ========= HERO ========= -->
+  <section class="hero">
+    <div class="container hero-wrap">
+      <div class="left">
+        <div class="card">
+          <!-- Reemplaza assets/perfil.jpg por tu foto -->
+          <img class="avatar" src="assets/perfil.jpg" alt="Imagen de portada"/>
+          <div>
+            <div class="tag">Estudiante de Ingenieria Informatica</div>
+            <h1>¡Hola! Soy <span style="color:var(--brand)">Michael Richard Gavino Isidro</span></h1>
+            <p class="lead">Me apasionan la tecnología, el diseño y crear soluciones útiles. En esta página comparto quién soy, mis proyectos del curso y reflexiones sobre mi vida universitaria en Cayetano.</p>
+            <div class="hero stats" aria-label="Datos rápidos">
+              <span class="tag">📍 Lima, Perú</span>
+              <span class="tag">🎓 2025</span>
+              <span class="tag">💼 Intereses: Web, IA, UX</span>
+            </div>
+            <div class="actions">
+              <a class="btn primary" href="#proyectos">Ver proyectos</a>
+              <a class="btn" href="#contacto">Contacto</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <!-- Reemplaza assets/portada.jpg por una imagen de portada -->
+        <img class="cover" src="assets/portada.jpg" alt="Imagen de portada del portafolio" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= SOBRE MI ========= -->
+  <section id="sobre-mi">
+    <div class="container">
+      <h2>Sobre mí</h2>
+      <p class="lead">Hola soy Michael Gavino Estudiante de la carrera de Ingenieria Informatica en la Universidad Peruana Cayetano Heredia</p>
+      <div class="cards">
+        <div class="card" style="grid-column: span 7">
+          <h3>Biografía</h3>
+          <p>Nací en la region de Huanuco … Me gusta jugar futbol, leer, ver documentales y codidicar … Actualmente curso el octavo ciclo de la carrera … En la universidad me comprometo a dar lo mejor de mi y aprovechar cada aprendizaje de todos los cursos y los profesores … Agradezco a las personas que confiaron en mi, principalmete a mi familia quien siempre estuvo conmigo y me ayyudo a podeperseguir mnis sueños.</p>
+          <ul>
+            <li>Hobbies: lectura, fútbol, Documentales</li>
+            <li>Habilidades: HTML, CSS, JS, python, C, trabajo en equipo</li>
+            <li>Objetivo 2025: lanzar mi primer proyecto web real</li>
+          </ul>
+        </div>
+        <div class="card" style="grid-column: span 5">
+          <h3>Datos rápidos</h3>
+          <p><strong>Correo:</strong> michael.gavino@upch.pe<br>
+             <strong>LinkedIn:</strong> https://www.linkedin.com/in/michael-richard-gavino-isidro/<br>
+             <strong>GitHub:</strong> https://github.com/Michael-Gavino</p>
+          <p class="muted"></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= PROYECTOS Y DINÁMICAS ========= -->
+  <section id="proyectos" class="projects">
+    <div class="container">
+      <h2>Proyectos y dinámicas del curso</h2>
+      <p class="lead">Comparte evidencias: descripción breve, tu rol, herramientas usadas y aprendizajes. Sube capturas en <code>assets/proyectos/</code>.</p>
+      <div style="margin:.5rem 0 1rem; display:flex; gap:.5rem; flex-wrap:wrap">
+        <button class="btn" data-filter="all">Todos</button>
+        <button class="btn" data-filter="web">Web</button>
+        <button class="btn" data-filter="uiux">UI/UX</button>
+        <button class="btn" data-filter="otros">Otros</button>
+      </div>
+
+      <div class="cards" id="projectGrid">
+        <!-- ITEM 1 -->
+        <article class="card item" data-tags="web">
+          <img class="thumb" src="assets/proyectos/proyecto-1.jpg" alt="Miniatura del Proyecto 1" loading="lazy" />
+          <div class="meta">
+            <span class="tag">Web</span>
+            <span class="tag">HTML/CSS/JS</span>
+          </div>
+          <h3>Proyecto 1: Landing de ejemplo</h3>
+          <p>Descripción breve del reto, decisiones de diseño y resultados.</p>
+          <div style="display:flex; gap:.5rem; flex-wrap:wrap">
+            <button class="btn" data-modal="p1">Ver más</button>
+            <a class="btn" href="#" target="_blank" rel="noopener">Demo</a>
+            <a class="btn" href="#" target="_blank" rel="noopener">Código</a>
+          </div>
+        </article>
+
+        <!-- ITEM 2 -->
+        <article class="card item" data-tags="uiux">
+          <img class="thumb" src="assets/proyectos/proyecto-2.jpg" alt="Miniatura del Proyecto 2" loading="lazy" />
+          <div class="meta">
+            <span class="tag">UI/UX</span>
+            <span class="tag">Prototipo</span>
+          </div>
+          <h3>Dinámica 2: Prototipo de baja fidelidad</h3>
+          <p>Sketches, flujos y pruebas rápidas con compañeros.</p>
+          <button class="btn" data-modal="p2">Ver más</button>
+        </article>
+
+        <!-- ITEM 3 -->
+        <article class="card item" data-tags="otros">
+          <img class="thumb" src="assets/proyectos/proyecto-3.jpg" alt="Miniatura del Proyecto 3" loading="lazy" />
+          <div class="meta">
+            <span class="tag">Análisis</span>
+            <span class="tag">Presentación</span>
+          </div>
+          <h3>Trabajo de otro curso</h3>
+          <p>Breve explicación de cómo se relaciona con este curso.</p>
+          <button class="btn" data-modal="p3">Ver más</button>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= REFLEXIONES ========= -->
+  <section id="reflexiones" class="reflexiones">
+    <div class="container">
+      <h2>Reflexiones sobre la vida universitaria en Cayetano</h2>
+      <p class="lead">Escribe artículos cortos: aprendizajes, desafíos, tips para nuevos estudiantes, equilibrio estudio-vida, etc.</p>
+      <div class="cards">
+        <div class="card item">
+          <article>
+            <small class="muted">12 de agosto de 2025 • 3 min</small>
+            <div class="title">Lo que aprendí en la primera semana</div>
+            <p>Texto de ejemplo. Reemplaza con tus ideas y experiencias.</p>
+            <a class="btn" href="#" aria-disabled="true">Leer</a>
+          </article>
+        </div>
+        <div class="card item">
+          <article>
+            <small class="muted">28 de agosto de 2025 • 4 min</small>
+            <div class="title">Estudiar, trabajar y no morir en el intento</div>
+            <p>Consejos para manejar el tiempo, priorizar y descansar.</p>
+            <a class="btn" href="#" aria-disabled="true">Leer</a>
+          </article>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= GALERÍA ========= -->
+  <section id="galeria">
+    <div class="container">
+      <h2>Galería</h2>
+      <p class="lead">Sube fotos de actividades, eventos y proyectos. Colócalas en <code>assets/galeria/</code>.</p>
+      <div class="gallery-grid" id="gallery">
+        <img src="assets/galeria/1.jpg" alt="Foto 1 de la galería" loading="lazy" />
+        <img src="assets/galeria/2.jpg" alt="Foto 2 de la galería" loading="lazy" />
+        <img src="assets/galeria/3.jpg" alt="Foto 3 de la galería" loading="lazy" />
+        <img src="assets/galeria/4.jpg" alt="Foto 4 de la galería" loading="lazy" />
+        <img src="assets/galeria/5.jpg" alt="Foto 5 de la galería" loading="lazy" />
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= LÍNEA DE TIEMPO ========= -->
+  <section id="timeline">
+    <div class="container">
+      <h2>Línea de tiempo universitaria</h2>
+      <div class="timeline">
+        <div class="t-item">
+          <h3>Ingreso a la universidad <small>• 2022-1</small></h3>
+          <small>Curso A, Curso B</small>
+          <p>Primeros pasos, adaptación y objetivos.</p>
+        </div>
+        <div class="t-item">
+          <h3>Proyecto destacado <small>• Oct 2024</small></h3>
+          <small>Concurso de prototipos, equipo de 5</small>
+          <p>Qué hiciste, qué aprendiste y resultados.</p>
+        </div>
+        <div class="t-item">
+          <h3>Meta personal <small>• 2026</small></h3>
+          <small>Prácticas pre-profesionales</small>
+          <p>Describe tu objetivo y plan para lograrlo.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========= REFERENCIAS / BIBLIOGRAFÍA ========= -->
+  <section id="referencias">
+    <div class="container">
+      <h2>Referencias / Bibliografía</h2>
+      <p class="lead">Cita aquí fuentes que usaste en proyectos o lecturas recomendadas. Formato sugerido: APA.</p>
+      <ul>
+        <li>Apellido, N. (Año). <em>Título del recurso</em>. Editorial. URL</li>
+        <li>Autor, A. (Año). <em>Artículo o documentación</em>. Sitio. URL</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ========= CONTACTO ========= -->
+  <section id="contacto">
+    <div class="container">
+      <h2>Contacto</h2>
+      <p class="lead">¿Colaboramos? Escríbeme. <code></code> </p>
+      <form id="contactForm" action="mailto:michael.gavino@upch.pe" method="POST" enctype="text/plain">
+        <div class="cards">
+          <div class="card" style="grid-column: span 6">
+            <label for="nombre">Nombre</label>
+            <input id="nombre" name="Nombre" placeholder="Ingrese su nombre completo" required />
+          </div>
+          <div class="card" style="grid-column: span 6">
+            <label for="email">Email</label>
+            <input id="email" name="Email" type="email" placeholder="Ingrése su correo electronico" required />
+          </div>
+          <div class="card" style="grid-column: span 12">
+            <label for="mensaje">Mensaje</label>
+            <textarea id="mensaje" name="Mensaje" placeholder="Cuéntame sobre tu idea"></textarea>
+          </div>
+        </div>
+        <div style="margin-top: .6rem">
+          <button class="btn primary" type="submit">Enviar</button>
+          <button class="btn" type="reset">Limpiar</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container" style="display:flex; justify-content:space-between; gap:1rem; align-items:center; flex-wrap:wrap">
+      <div>© <span id="year"></span> Michael Richard Gavino Isidro</div>
+      <div style="display:flex; gap:.6rem; align-items:center">
+        <a class="btn" href="#sobre-mi">↑ Arriba</a>
+        <a class="btn" href="https://github.com/Michael-Gavino" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/michael-richard-gavino-isidro/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ========= MODALES (uno por proyecto) ========= -->
+  <dialog id="modal-p1" aria-label="Proyecto 1">
+    <div class="modal-head">
+      <strong>Proyecto 1: Landing de ejemplo</strong>
+      <button class="btn" data-close>✕</button>
+    </div>
+    <div class="modal-body">
+      <img class="modal-img" src="assets/proyectos/proyecto-1.jpg" alt="Vista ampliada del Proyecto 1" />
+      <p style="margin-top: .8rem">Detalle: objetivos, proceso, roles, herramientas, links.</p>
+    </div>
+  </dialog>
+
+  <dialog id="modal-p2" aria-label="Proyecto 2">
+    <div class="modal-head">
+      <strong>Dinámica 2: Prototipo de baja fidelidad</strong>
+      <button class="btn" data-close>✕</button>
+    </div>
+    <div class="modal-body">
+      <img class="modal-img" src="assets/proyectos/proyecto-2.jpg" alt="Vista ampliada del Proyecto 2" />
+      <p style="margin-top: .8rem">Incluye imágenes del cuaderno, Figma y comentarios.</p>
+    </div>
+  </dialog>
+
+  <dialog id="modal-p3" aria-label="Proyecto 3">
+    <div class="modal-head">
+      <strong>Trabajo de otro curso</strong>
+      <button class="btn" data-close>✕</button>
+    </div>
+    <div class="modal-body">
+      <img class="modal-img" src="assets/proyectos/proyecto-3.jpg" alt="Vista ampliada del Proyecto 3" />
+      <p style="margin-top: .8rem">Explica la relación con tu formación y aprendizajes clave.</p>
+    </div>
+  </dialog>
+
+  <script src="script.js"></script>
+</body>
+</html>

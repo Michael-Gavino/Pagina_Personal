@@ -1,9 +1,5 @@
 // =============================
-// JS: Interactividad mínima
-// - Modo claro/oscuro
-// - Filtro de proyectos
-// - Lightbox con <dialog>
-// - Validación simple del formulario
+// JS: Interactividad completa
 // =============================
 
 const root = document.documentElement;
@@ -46,24 +42,12 @@ document.querySelectorAll('[data-modal]').forEach(b => {
     if (dlg) dlg.showModal();
   });
 });
+
 document.querySelectorAll('dialog [data-close]').forEach(b => b.addEventListener('click', e => {
   e.target.closest('dialog').close();
 }));
 
-// Galería: click para abrir imagen en modal genérico reutilizando modal-p1
-const gallery = document.getElementById('gallery');
-gallery?.addEventListener('click', (e) => {
-  const img = e.target.closest('img');
-  if(!img) return;
-  // Reutilizamos modal-p1 para vista rápida
-  const dlg = document.getElementById('modal-p1');
-  dlg.querySelector('.modal-img').src = img.src;
-  dlg.querySelector('.modal-img').alt = img.alt;
-  dlg.querySelector('.modal-head strong').textContent = img.alt || 'Imagen';
-  dlg.showModal();
-});
-
-// Validación básica del formulario (evitar envíos vacíos)
+// Validación básica del formulario
 document.getElementById('contactForm')?.addEventListener('submit', (e) => {
   const nombre = document.getElementById('nombre');
   const email = document.getElementById('email');
@@ -71,4 +55,40 @@ document.getElementById('contactForm')?.addEventListener('submit', (e) => {
     e.preventDefault();
     alert('Por favor completa nombre y email.');
   }
+});
+
+// Manejo de expansión de reflexiones
+document.querySelectorAll('.reflexiones .btn').forEach(btn => {
+  btn.addEventListener('click', (e) => {
+    e.preventDefault();
+    const article = btn.closest('article');
+    const content = article.querySelector('.content');
+    const isExpanded = content.classList.contains('expanded');
+    
+    if (isExpanded) {
+      content.classList.remove('expanded');
+      btn.textContent = 'Leer';
+    } else {
+      content.classList.add('expanded');
+      btn.textContent = 'Cerrar';
+    }
+  });
+});
+
+// Scroll suave para navegación
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+  anchor.addEventListener('click', function (e) {
+    e.preventDefault();
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      const headerOffset = 80;
+      const elementPosition = target.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerOffset;
+
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  });
 });

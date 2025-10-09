@@ -4,16 +4,16 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Michael Gavino — Portafolio Personal</title>
-  <meta name="description" content="Portafolio personal de Nombre Apellido: presentación, proyectos, reflexiones en Cayetano y contacto." />
-  <meta name="author" content="Nombre Apellido" />
+  <meta name="description" content="Portafolio personal de Michael Gavino: presentación, proyectos, reflexiones en Cayetano y contacto." />
+  <meta name="author" content="Michael Gavino" />
   <meta name="theme-color" content="#0ea5e9" />
 
-  <!-- SEO y redes sociales (rellenar) -->
+  <!-- SEO y redes sociales -->
   <meta property="og:title" content="Michael Gavino" />
   <meta property="og:description" content="Presentación, proyectos y reflexiones." />
   <meta property="og:image" content="assets/og-image.jpg" />
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://tu-dominio.com" />
+  <meta property="og:url" content="https://michaegavino.com" />
   <meta name="twitter:card" content="summary_large_image" />
 
   <link rel="stylesheet" href="style.css" />
@@ -31,7 +31,6 @@
           <a href="#sobre-mi">Sobre mí</a>
           <a href="#proyectos">Proyectos</a>
           <a href="#reflexiones">Reflexiones</a>
-          <!-- <a href="#galeria">Galería</a> -->
           <a href="#timeline">Línea de tiempo</a>
           <a href="#contacto">Contacto</a>
           <button class="btn" id="themeToggle" aria-label="Cambiar tema">🌓</button>
@@ -40,33 +39,43 @@
     </div>
   </header>
 
-  <!-- ========= HERO ========= -->
-  <section class="hero">
-    <div class="container hero-wrap">
-      <div class="left">
-        <div class="card">
-          <!-- Reemplaza assets/perfil.jpg por tu foto -->
-          <img class="avatar" src="assets/perfil.jpg" alt="Imagen de portada"/>
-          <div>
-            <div class="tag">Estudiante de Ingenieria Informatica</div>
-            <h1>¡Hola! Soy <span style="color:var(--brand)">Michael Richard Gavino Isidro</span></h1>
-            <p class="lead">Me apasionan la tecnología, el diseño y crear soluciones útiles. En esta página comparto quién soy, mis proyectos del curso y reflexiones sobre mi vida universitaria en Cayetano.</p>
-            <div class="hero stats" aria-label="Datos rápidos">
-              <span class="tag">📍 Lima, Perú</span>
-              <span class="tag"> 2025</span>
-              <span class="tag">💼 Intereses: Web, IA, UX</span>
-            </div>
-            <div class="actions">
-              <a class="btn primary" href="#proyectos">Ver proyectos</a>
-              <a class="btn" href="#contacto">Contacto</a>
-            </div>
+  <!-- ========= HERO CON FOTO DE FONDO ========= -->
+  <section class="hero-fullscreen">
+    <div class="hero-background">
+      <img src="assets/portada.png" alt="Fondo" class="hero-bg-image" />
+      <div class="hero-overlay"></div>
+    </div>
+    <div class="hero-content">
+      <div class="container">
+        <div class="hero-left">
+          <img src="assets/perfil.jpg" alt="Michael Gavino" class="hero-profile-img" />
+          <div class="hero-profile-tags">
+            <span class="tag">📍 Lima, Perú</span>
+            <span class="tag"> 2025</span>
+            <span class="tag">💼 Web, IA, UX</span>
+          </div>
+        </div>
+        <div class="hero-text">
+          <span class="tag hero-tag">Estudiante de Ingeniería Informática</span>
+          <h1 class="hero-title">
+            ¡Hola! Soy <br>
+            <span class="gradient-text">Michael Richard<br>Gavino Isidro</span>
+          </h1>
+          <p class="hero-lead">
+            Me apasionan la tecnología, el diseño y crear soluciones útiles. 
+            En esta página comparto quién soy, mis proyectos del curso y 
+            reflexiones sobre mi vida universitaria en Cayetano.
+          </p>
+          <div class="hero-actions">
+            <a class="btn primary" href="#proyectos">Ver proyectos</a>
+            <a class="btn" href="#contacto">Contacto</a>
           </div>
         </div>
       </div>
-      <div class="right">
-        <!-- Reemplaza assets/portada.jpg por una imagen de portada -->
-        <img class="cover" src="assets/portada.png" alt="Imagen de portada del portafolio" />
-      </div>
+    </div>
+    <div class="scroll-indicator">
+      <span>Desliza</span>
+      <div class="scroll-arrow">↓</div>
     </div>
   </section>
 
@@ -74,23 +83,22 @@
   <section id="sobre-mi">
     <div class="container">
       <h2>Sobre mí</h2>
-      <p class="lead">Hola, soy Michael Gavino Estudiante de la carrera de Ingenieria Informatica en la Universidad Peruana Cayetano Heredia</p>
+      <p class="lead">Hola, soy Michael Gavino, estudiante de la carrera de Ingeniería Informática en la Universidad Peruana Cayetano Heredia</p>
       <div class="cards">
         <div class="card" style="grid-column: span 7">
           <h3>Biografía</h3>
-          <p>Nací en la region de Huánuco. Me gusta jugar futbol, leer, ver documentales y codificar. Actualmente curso el octavo ciclo de la carrera … En la universidad me comprometo a dar lo mejor de mi y aprovechar cada aprendizaje de todos los cursos y los profesores … Agradezco a las personas que confiaron en mi, principalmete a mi familia quien siempre estuvo conmigo y me ayyudo a podeperseguir mnis sueños.</p>
+          <p>Nací en la región de Huánuco. Me gusta jugar fútbol, leer, ver documentales y codificar. Actualmente curso el octavo ciclo de la carrera. En la universidad me comprometo a dar lo mejor de mí y aprovechar cada aprendizaje de todos los cursos y los profesores. Agradezco a las personas que confiaron en mí, principalmente a mi familia quien siempre estuvo conmigo y me ayudó a poder perseguir mis sueños.</p>
           <ul>
-            <li>Hobbies: lectura, fútbol, Documentales</li>
-            <li>Habilidades: HTML, CSS, JS, python, C, trabajo en equipo y gestión de proyectos informáticos</li>
+            <li>Hobbies: lectura, fútbol, documentales</li>
+            <li>Habilidades: HTML, CSS, JS, Python, C, trabajo en equipo y gestión de proyectos informáticos</li>
             <li>Objetivo 2025: lanzar mi primer proyecto web real</li>
           </ul>
         </div>
         <div class="card" style="grid-column: span 5">
           <h3>Datos rápidos</h3>
           <p><strong>Correo:</strong> michael.gavino@upch.pe<br>
-             <strong>LinkedIn:</strong> https://www.linkedin.com/in/michael-richard-gavino-isidro/<br>
-             <strong>GitHub:</strong> https://github.com/Michael-Gavino</p>
-          <p class="muted"></p>
+             <strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/michael-richard-gavino-isidro/" target="_blank">Ver perfil</a><br>
+             <strong>GitHub:</strong> <a href="https://github.com/Michael-Gavino" target="_blank">Ver repositorios</a></p>
         </div>
       </div>
     </div>
@@ -100,7 +108,7 @@
   <section id="proyectos" class="projects">
     <div class="container">
       <h2>Proyectos y dinámicas del curso</h2>
-      <p class="lead">En esta seccion se muestran algunos de mis proyectos realizados en diferentes cursos<code></code>.</p>
+      <p class="lead">En esta sección se muestran algunos de mis proyectos realizados en diferentes cursos</p>
       <div style="margin:.5rem 0 1rem; display:flex; gap:.5rem; flex-wrap:wrap">
         <button class="btn" data-filter="all">Todos</button>
         <button class="btn" data-filter="web">Web</button>
@@ -114,18 +122,14 @@
           <img class="thumb" src="assets/proyectos/proyecto-1.jpg" alt="Miniatura del Proyecto 1" loading="lazy" />
           <div class="meta">
             <span class="tag">Python</span>
-            <span class="tag">Mysql/Neo4j</span>
+            <span class="tag">MySQL/Neo4j</span>
             <span class="tag">API REST</span>
             <span class="tag">Web</span>
             <span class="tag">HTML/CSS/JS</span>
           </div>
           <h3>Proyecto 1: Simulación de una red social basado en Instagram</h3>
-          <p>El proyeco fue desarrollado en el curso de Bases de Datos, Usando las bases de datos relacionales y no relacionales se implemento las funcioalidades de la red social.</p>
-          <!--<div style="display:flex; gap:.5rem; flex-wrap:wrap"> -->
-            <button class="btn" data-modal="p1">Ver más</button>
-            <!--<a class="btn" href="#" target="_blank" rel="noopener">Demo</a> -->
-            <!--<a class="btn" href="#" target="_blank" rel="noopener">Código</a> -->
-          <!--</div> -->
+          <p>El proyecto fue desarrollado en el curso de Bases de Datos. Usando las bases de datos relacionales y no relacionales se implementó las funcionalidades de la red social.</p>
+          <button class="btn" data-modal="p1">Ver más</button>
         </article>
 
         <!-- ITEM 2 -->
@@ -134,17 +138,17 @@
           <div class="meta">
             <span class="tag">C++</span>
             <span class="tag">Prototipo</span>
-            <span class="tag">Gestion de Proyectos</span>
+            <span class="tag">Gestión de Proyectos</span>
             <span class="tag">IoT</span>
             <span class="tag">Electrónica</span>
           </div>
-          <h3>Proyecto 2: Prototipo de un sistema de clasificacion de agua recolectada por atrapanieblas</h3>
-          <p>Participamos en el concurso de prototipos "Runayay Cayetano" obteniendo al tercer lugar.</p>
+          <h3>Proyecto 2: Prototipo de un sistema de clasificación de agua recolectada por atrapanieblas</h3>
+          <p>Participamos en el concurso de prototipos "Runayay Cayetano" obteniendo el tercer lugar.</p>
           <button class="btn" data-modal="p2">Ver más</button>
         </article>
 
         <!-- ITEM 3 -->
-        <article class="card item" data-tags="web, uiux">
+        <article class="card item" data-tags="web uiux">
           <img class="thumb" src="assets/proyectos/proyecto-3.jpg" alt="Miniatura del Proyecto 3" loading="lazy" />
           <div class="meta">
             <span class="tag">Web</span>
@@ -153,7 +157,7 @@
             <span class="tag">Presentación</span>
           </div>
           <h3>Página web interactiva creada con Streamlit</h3>
-          <p>Se implemento una página web interactiva que muestra un resumen de analizar datos de Áreas Naturales protegidas(ANP), ademas se uso una base de datos de ubigeos para obtener las coordenadas.</p>
+          <p>Se implementó una página web interactiva que muestra un resumen de analizar datos de Áreas Naturales Protegidas (ANP), además se usó una base de datos de ubigeos para obtener las coordenadas.</p>
           <button class="btn" data-modal="p3">Ver más</button>
         </article>
       </div>
@@ -164,47 +168,39 @@
   <section id="reflexiones" class="reflexiones">
     <div class="container">
       <h2>Reflexiones sobre la vida universitaria en Cayetano</h2>
-      <p class="lead">Escribe artículos cortos: aprendizajes, desafíos, tips para nuevos estudiantes, equilibrio estudio-vida, etc.</p>
+      <p class="lead">Artículos cortos sobre aprendizajes, desafíos, tips para nuevos estudiantes y equilibrio estudio-vida</p>
       <div class="cards">
         <div class="card item">
           <article>
             <small class="muted">12 de agosto de 2025 • 3 min</small>
             <div class="title">Lo que aprendí en la primera semana</div>
-            <p>Mi primera semana en la universidad fue una mezcla de emociones: entusiasmo, nervios y muchas expectativas. Al principio pensé que sería similar al colegio, pero pronto entendí que la universidad implica un cambio profundo en la forma de aprender y organizarse.
-              Aprendí que la autonomía es clave: nadie te recordará las tareas ni te dirá cómo distribuir tu tiempo, así que es fundamental planificar desde el primer día. También descubrí el valor de participar activamente en clase, no solo para resolver dudas, sino para construir relaciones con los profesores y compañeros.
-              Otro gran aprendizaje fue la importancia del equilibrio. Al principio intenté hacerlo todo de golpe, pero me di cuenta de que descansar y tener espacios personales es igual de importante que estudiar. Esta primera semana me enseñó que la universidad no es solo un lugar para adquirir conocimientos, sino también para crecer, adaptarse y aprender a gestionar tu propio camino.</p>
-            <a class="btn" href="#" aria-disabled="true">Leer</a>
+            <p class="excerpt">Mi primera semana en la universidad fue una mezcla de emociones: entusiasmo, nervios y muchas expectativas...</p>
+            <div class="content">
+              <p>Mi primera semana en la universidad fue una mezcla de emociones: entusiasmo, nervios y muchas expectativas. Al principio pensé que sería similar al colegio, pero pronto entendí que la universidad implica un cambio profundo en la forma de aprender y organizarse.</p>
+              <p>Aprendí que la autonomía es clave: nadie te recordará las tareas ni te dirá cómo distribuir tu tiempo, así que es fundamental planificar desde el primer día. También descubrí el valor de participar activamente en clase, no solo para resolver dudas, sino para construir relaciones con los profesores y compañeros.</p>
+              <p>Otro gran aprendizaje fue la importancia del equilibrio. Al principio intenté hacerlo todo de golpe, pero me di cuenta de que descansar y tener espacios personales es igual de importante que estudiar. Esta primera semana me enseñó que la universidad no es solo un lugar para adquirir conocimientos, sino también para crecer, adaptarse y aprender a gestionar tu propio camino.</p>
+            </div>
+            <button class="btn">Leer</button>
           </article>
         </div>
+        
         <div class="card item">
           <article>
             <small class="muted">28 de agosto de 2025 • 4 min</small>
             <div class="title">Estudiar, trabajar y no morir en el intento</div>
-            <p>Estudiar en la universidad puede ser abrumador si no sabes cómo manejar tu tiempo. Después de varios intentos fallidos, desarrollé una rutina que me permite cumplir con mis responsabilidades sin descuidar mi bienestar.
-              Empiezo cada domingo planificando mi semana: reviso tareas, exámenes y compromisos, y asigno bloques de tiempo específicos para cada actividad.
-              También aprendí a priorizar. No todas las tareas tienen la misma urgencia, así que identifico cuáles requieren más atención y las abordo primero. Además, dejo siempre un margen para imprevistos, porque en la vida universitaria siempre surgen cambios.
-              Por último, reservo tiempo para mí: salir con amigos, hacer ejercicio o simplemente descansar. Este equilibrio es fundamental para rendir mejor y evitar el agotamiento. Organizar mi semana no solo mejoró mis resultados académicos, sino también mi salud mental y mi motivación diaria.</p>
-            <a class="btn" href="#" aria-disabled="true">Leer</a>
+            <p class="excerpt">Estudiar en la universidad puede ser abrumador si no sabes cómo manejar tu tiempo...</p>
+            <div class="content">
+              <p>Estudiar en la universidad puede ser abrumador si no sabes cómo manejar tu tiempo. Después de varios intentos fallidos, desarrollé una rutina que me permite cumplir con mis responsabilidades sin descuidar mi bienestar.</p>
+              <p>Empiezo cada domingo planificando mi semana: reviso tareas, exámenes y compromisos, y asigno bloques de tiempo específicos para cada actividad.</p>
+              <p>También aprendí a priorizar. No todas las tareas tienen la misma urgencia, así que identifico cuáles requieren más atención y las abordo primero. Además, dejo siempre un margen para imprevistos, porque en la vida universitaria siempre surgen cambios.</p>
+              <p>Por último, reservo tiempo para mí: salir con amigos, hacer ejercicio o simplemente descansar. Este equilibrio es fundamental para rendir mejor y evitar el agotamiento. Organizar mi semana no solo mejoró mis resultados académicos, sino también mi salud mental y mi motivación diaria.</p>
+            </div>
+            <button class="btn">Leer</button>
           </article>
         </div>
       </div>
     </div>
   </section>
-
-  <!-- ========= GALERÍA ========= >
-  <section id="galeria">
-    <div class="container">
-      <h2>Galería</h2>
-      <p class="lead">Sube fotos de actividades, eventos y proyectos. Colócalas en <code>assets/galeria/</code>.</p>
-      <div class="gallery-grid" id="gallery">
-        <img src="assets/galeria/1.jpg" alt="Foto 1 de la galería" loading="lazy" />
-        <img src="assets/galeria/2.jpg" alt="Foto 2 de la galería" loading="lazy" />
-        <img src="assets/galeria/3.jpg" alt="Foto 3 de la galería" loading="lazy" />
-        <img src="assets/galeria/4.jpg" alt="Foto 4 de la galería" loading="lazy" />
-        <img src="assets/galeria/5.jpg" alt="Foto 5 de la galería" loading="lazy" />
-      </div>
-    </div>
-  </section> -->
 
   <!-- ========= LÍNEA DE TIEMPO ========= -->
   <section id="timeline">
@@ -219,7 +215,7 @@
         <div class="t-item">
           <h3>Proyecto destacado <small>• Diciembre 2024</small></h3>
           <small>Concurso de prototipos, equipo de 5</small>
-          <p>Tercer lugar en el concurso de prototipos "Runayay Cayetano" </p>
+          <p>Tercer lugar en el concurso de prototipos "Runayay Cayetano"</p>
         </div>
         <div class="t-item">
           <h3>Meta personal <small>• 2026</small></h3>
@@ -230,23 +226,11 @@
     </div>
   </section>
 
-  <!-- ========= REFERENCIAS / BIBLIOGRAFÍA ========= >
-  <section id="referencias">
-    <div class="container">
-      <h2>Referencias / Bibliografía</h2>
-      <p class="lead">Cita aquí fuentes que usaste en proyectos o lecturas recomendadas. Formato sugerido: APA.</p>
-      <ul>
-        <li>Apellido, N. (Año). <em>Título del recurso</em>. Editorial. URL</li>
-        <li>Autor, A. (Año). <em>Artículo o documentación</em>. Sitio. URL</li>
-      </ul>
-    </div>
-  </section> -->
-
   <!-- ========= CONTACTO ========= -->
   <section id="contacto">
     <div class="container">
       <h2>Contacto</h2>
-      <p class="lead">¿Colaboramos? Escríbeme. <code></code> </p>
+      <p class="lead">¿Colaboramos? Escríbeme.</p>
       <form id="contactForm" action="mailto:michael.gavino@upch.pe" method="POST" enctype="text/plain">
         <div class="cards">
           <div class="card" style="grid-column: span 6">
@@ -255,7 +239,7 @@
           </div>
           <div class="card" style="grid-column: span 6">
             <label for="email">Email</label>
-            <input id="email" name="Email" type="email" placeholder="Ingrése su correo electronico" required />
+            <input id="email" name="Email" type="email" placeholder="Ingrese su correo electrónico" required />
           </div>
           <div class="card" style="grid-column: span 12">
             <label for="mensaje">Mensaje</label>
@@ -281,7 +265,7 @@
     </div>
   </footer>
 
-  <!-- ========= MODALES (uno por proyecto) ========= -->
+  <!-- ========= MODALES ========= -->
   <dialog id="modal-p1" aria-label="Proyecto 1">
     <div class="modal-head">
       <strong>Proyecto: Red social basado en Instagram</strong>
@@ -289,7 +273,7 @@
     </div>
     <div class="modal-body">
       <img class="modal-img" src="assets/proyectos/proyecto-1.jpg" alt="Vista ampliada del Proyecto 1" />
-      <p style="margin-top: .8rem">En el curos de Bases de Datos realizamos este proyecto, donde logramos implemetar las funcionalidades básicas de Instagram. Para las conexiones se uso Api Rest(metodos http) con Python y para la visualizacion y estilo se uso Html, Css y JavaScript</p>
+      <p style="margin-top: .8rem">En el curso de Bases de Datos realizamos este proyecto, donde logramos implementar las funcionalidades básicas de Instagram. Para las conexiones se usó API REST (métodos HTTP) con Python y para la visualización y estilo se usó HTML, CSS y JavaScript.</p>
     </div>
   </dialog>
 
@@ -300,13 +284,13 @@
     </div>
     <div class="modal-body">
       <img class="modal-img" src="assets/proyectos/proyecto-2.jpg" alt="Vista ampliada del Proyecto 2" />
-      <p style="margin-top: .8rem">Este proyecto tuvo sus origenes en el curso de Fundamentos de diseño, consiguiendo mayor fiabilidad en el curso de Proyectos de Ingeniería 1.</p>
+      <p style="margin-top: .8rem">Este proyecto tuvo sus orígenes en el curso de Fundamentos de diseño, consiguiendo mayor fiabilidad en el curso de Proyectos de Ingeniería 1.</p>
     </div>
   </dialog>
 
   <dialog id="modal-p3" aria-label="Proyecto 3">
     <div class="modal-head">
-      <strong>Proyecto 3.</strong>
+      <strong>Proyecto 3</strong>
       <button class="btn" data-close>✕</button>
     </div>
     <div class="modal-body">
